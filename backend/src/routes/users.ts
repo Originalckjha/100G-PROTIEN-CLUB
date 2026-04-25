@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import bcrypt from 'bcryptjs';
 import { v4 as uuid } from 'uuid';
-import { users } from '../data/store.js';
-import { requireAuth, signToken } from '../middleware/auth.js';
-import type { User, PublicUser } from '../types.js';
+import { users } from '../data/store';
+import { requireAuth, signToken } from '../middleware/auth';
+import type { User, PublicUser } from '../types';
 
 const router = Router();
 

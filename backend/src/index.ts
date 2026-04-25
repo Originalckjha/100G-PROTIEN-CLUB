@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import usersRouter from './routes/users.js';
-import recipesRouter from './routes/recipes.js';
-import tipsRouter from './routes/tips.js';
-import postsRouter from './routes/posts.js';
+import usersRouter from './routes/users';
+import recipesRouter from './routes/recipes';
+import tipsRouter from './routes/tips';
+import postsRouter from './routes/posts';
 
 const app = express();
 const PORT = process.env.PORT ?? 3001;

@@ -42,7 +42,7 @@ export default function Profile() {
       .then(([user, allRecipes, allTips]) => {
         setProfile(user);
         setFollowers(user.followers);
-        setFollowing(currentUser ? user.following?.includes(currentUser.id) : false);
+        setFollowing(currentUser ? (currentUser.following ?? []).includes(user.id) : false);
         setRecipes(allRecipes.filter(r => r.authorId === user.id));
         setTips(allTips.filter(t => t.authorId === user.id));
       })

@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { v4 as uuid } from 'uuid';
-import { tips, users } from '../data/store.js';
-import { requireAuth, optionalAuth } from '../middleware/auth.js';
-import type { Tip, TipCategory } from '../types.js';
+import { tips, users } from '../data/store';
+import { requireAuth, optionalAuth } from '../middleware/auth';
+import type { Tip, TipCategory } from '../types';
 
 const router = Router();
 

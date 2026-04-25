@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { v4 as uuid } from 'uuid';
-import { recipes, users } from '../data/store.js';
-import { requireAuth, optionalAuth } from '../middleware/auth.js';
-import type { Recipe, RecipeCategory } from '../types.js';
+import { recipes, users } from '../data/store';
+import { requireAuth, optionalAuth } from '../middleware/auth';
+import type { Recipe, RecipeCategory } from '../types';
 
 const router = Router();
 

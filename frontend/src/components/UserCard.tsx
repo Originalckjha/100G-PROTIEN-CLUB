@@ -24,7 +24,7 @@ export default function UserCard({ user: profileUser }: Props) {
   const { user: currentUser, isAuthenticated } = useAuth();
   const [followers, setFollowers] = useState(profileUser.followers);
   const [isFollowing, setIsFollowing] = useState(
-    currentUser ? profileUser.following?.includes(currentUser.id) : false
+    currentUser ? (currentUser.following ?? []).includes(profileUser.id) : false
   );
   const [loading, setLoading] = useState(false);
 

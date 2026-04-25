@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import type { User, Recipe, Tip, Post } from '../types.js';
+import type { User, Recipe, Tip, Post } from '../types';
 
 export const users = new Map<string, User>();
 export const recipes = new Map<string, Recipe>();
