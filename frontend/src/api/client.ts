@@ -16,6 +16,12 @@ async function request<T>(
   if (token) headers['Authorization'] = `Bearer ${token}`;
 
   const res = await fetch(`${BASE}${path}`, { ...options, headers });
+
+  const contentType = res.headers.get('content-type');
+  if (!contentType?.includes('application/json')) {
+    throw new Error(`Server error ${res.status}: ${res.statusText || 'unexpected response format'}`);
+  }
+
   const json = await res.json() as { data?: T; error?: string };
 
   if (!res.ok) throw new Error(json.error ?? 'Request failed');
